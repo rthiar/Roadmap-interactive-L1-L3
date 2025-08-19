@@ -1,0 +1,972 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap interactive – Licence Sciences de l’éducation (L1–L3)</title>
+<style>
+  :root{
+    --bg:#0f172a; --card:#111827; --muted:#94a3b8; --text:#e5e7eb;
+    --accent:#22d3ee; --accent2:#a78bfa; --accent3:#34d399;
+  }
+  body{margin:0; padding:2rem; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;}
+  h1{font-size:2rem; margin:0 0 .5rem}
+  .subtitle{color:var(--muted); margin:0 0 1.25rem}
+  .toolbar{display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem}
+  input[type="search"]{flex:1 1 320px; padding:.8rem 1rem; border-radius:.75rem; border:1px solid #334155; background:#0b1220; color:var(--text); outline:none;}
+  .btn{padding:.7rem 1rem; border-radius:.75rem; border:1px solid #334155; background:#0b1220; color:var(--text); cursor:pointer;}
+  .btn.small{padding:.45rem .7rem; font-size:.85rem}
+  .grid{display:grid; gap:1.25rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));}
+  .card{background:linear-gradient(180deg, #0b1220, #0a0f1a); border:1px solid #1f2937; border-radius:1rem; padding:1rem 1rem .5rem; box-shadow:0 10px 30px rgba(0,0,0,.25);}
+  .month{display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:.5rem}
+  .month h2{font-size:1.1rem; margin:0}
+  .badge{font-size:.75rem; color:#0f172a; background:var(--accent); padding:.25rem .5rem; border-radius:.5rem}
+  details{border-top:1px dashed #233044; padding:.75rem 0}
+  summary{list-style:none; cursor:pointer; font-weight:600; display:flex; align-items:center; gap:.5rem}
+  summary::-webkit-details-marker{display:none}
+  .progress{display:flex; gap:.6rem; align-items:center}
+  .meta{display:flex; gap:.75rem; flex-wrap:wrap; margin:.5rem 0 .2rem}
+  .chip{font-size:.72rem; color:#0f172a; background:var(--accent2); padding:.2rem .5rem; border-radius:.5rem}
+  .pill{font-size:.72rem; color:#0f172a; background:var(--accent3); padding:.2rem .5rem; border-radius:.5rem}
+  ul{margin:.4rem 0 .6rem 1.2rem}
+  .muted{color:var(--muted)}
+  footer{margin-top:2rem; color:var(--muted); font-size:.85rem}
+  .hidden{display:none}
+  a{color:#7dd3fc; text-decoration:none}
+  a:hover{text-decoration:underline}
+  .card-tools{display:flex; gap:.5rem; margin-top:.5rem; border-top:1px dashed #233044; padding-top:.5rem}
+</style>
+
+<style>
+  @media print {
+    body{background:#ffffff;color:#000000;padding:0}
+    .toolbar, .btn, #search, #expand, #collapse, #reset, .card-tools{display:none !important}
+    .card{border:1px solid #e5e7eb; box-shadow:none; background:#ffffff; color:#000}
+    .badge{background:#111827; color:#ffffff}
+    details{border-top:1px solid #e5e7eb}
+    a{color:#0000ee; text-decoration:underline}
+  }
+  .badge.pct{background:#a78bfa; color:#0f172a}
+</style>
+
+</head>
+<body>
+  <h1>Roadmap interactive – Licence Sciences de l’éducation (L1–L3)</h1>
+  <div class="subtitle">Août 2025 → Juin 2026 · Cliquer un module pour ouvrir · Rechercher · <strong>Progresser avec cases à cocher</strong></div>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Rechercher (ex: Bourdieu, 1975, Montessori, méthodo…)">
+    <button class="btn" id="expand">Tout ouvrir</button>
+    <button class="btn" id="collapse">Tout fermer</button>
+    <button class="btn" id="reset">Réinitialiser progression</button>
+  </div>
+
+<div class="toolbar" id="progressbar">
+  <div style="flex:1 1 320px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem;">
+      <span>Progression globale</span>
+      <strong id="globalPct">0%</strong>
+    </div>
+    <div style="height:10px;background:#0b1220;border:1px solid #334155;border-radius:999px;overflow:hidden;">
+      <div id="globalBar" style="height:100%;width:0%;background:linear-gradient(90deg,#22d3ee,#a78bfa);"></div>
+    </div>
+  </div>
+  <button class="btn" id="print">Exporter en PDF</button>
+</div>
+
+  <div class="grid" id="grid">
+
+      <div class="card" data-month="Août–Septembre 2025">
+        <div class="month">
+          <h2>Août–Septembre 2025 — Les Fondations (L1)</h2>
+          <span class="badge">5 modules</span>
+        </div>
+        <div class="muted" style="margin:-.2rem 0 .3rem">Progression de ce mois : <strong class="cardPct">0%</strong></div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Août–Septembre 2025::0"/>
+                <span>Introduction aux sciences de l’éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Guy Avanzini</span></div>
+            <div class="meta"><span class='pill'>1967</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Discipline interdisciplinaire (sociologie, psychologie, philosophie, histoire, anthropologie)</li><li>Naissance en France (1967)</li><li>Éducation formelle / non formelle</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Avanzini – Introduction aux sciences de l’éducation</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://eduscol.education.fr' target='_blank' rel='noopener'>Éduscol – Repères pour l'éducation</a></li><li><a href='https://www.persee.fr/collection/edso' target='_blank' rel='noopener'>Persée – Revues en sciences de l'éducation</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Août–Septembre 2025::1"/>
+                <span>Histoire de l’éducation (France)</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Antoine Prost</span><span class='chip'>Claude Lelièvre</span></div>
+            <div class="meta"><span class='pill'>1833</span><span class='pill'>1881–82</span><span class='pill'>1959</span><span class='pill'>1975</span><span class='pill'>2002</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>1833 : loi Guizot</li><li>1881–82 : lois Ferry (gratuite, laïque, obligatoire)</li><li>1959 : scolarité obligatoire jusqu’à 16 ans</li><li>1975 : réforme Haby (collège unique)</li><li>2002 : LMD</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Prost – Histoire de l’enseignement</li><li>Lelièvre – Histoire des institutions scolaires</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://fr.wikisource.org/wiki/Lois_Ferry' target='_blank' rel='noopener'>Wikisource – Lois Ferry</a></li><li><a href='https://www.vie-publique.fr/parole-dexpert/270356-lhistoire-de-lecole' target='_blank' rel='noopener'>Vie-publique – Histoire de l'école</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Août–Septembre 2025::2"/>
+                <span>Sociologie de l’éducation (bases)</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Durkheim</span><span class='chip'>Bourdieu</span><span class='chip'>Passeron</span><span class='chip'>Bernstein</span></div>
+            <div class="meta"><span class='pill'>1902</span><span class='pill'>1964</span><span class='pill'>1970</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Durkheim : socialisation</li><li>Bourdieu & Passeron : reproduction sociale</li><li>Bernstein : codes linguistiques</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Bourdieu & Passeron – Les Héritiers</li><li>La Reproduction</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.cnrseditions.fr/podcast/' target='_blank' rel='noopener'>CNRS Éditions – Podcasts École & inégalités</a></li><li><a href='https://journals.openedition.org/lectures/' target='_blank' rel='noopener'>OpenEdition – Lectures en sociologie</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Août–Septembre 2025::3"/>
+                <span>Méthodologie du travail universitaire</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Nathalie Heinich</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Fiche de lecture</li><li>Problématique</li><li>Citations APA/Chicago</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Heinich – Méthodologie en sciences sociales</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.zotero.org/' target='_blank' rel='noopener'>Zotero – Gestion bibliographique</a></li><li><a href='https://owl.purdue.edu/' target='_blank' rel='noopener'>Purdue OWL – APA/Chicago (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Août–Septembre 2025::4"/>
+                <span>🎁 Bonus – Droit & éthique de l’éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>ONU</span><span class='chip'>UNESCO</span></div>
+            <div class="meta"><span class='pill'>1948</span><span class='pill'>1989</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>DUDH art. 26</li><li>CIDE 1989</li><li>Laïcité</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Rosenczveig – Les droits de l’enfant</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.un.org/fr/about-us/universal-declaration-of-human-rights' target='_blank' rel='noopener'>ONU – Déclaration universelle (art. 26)</a></li><li><a href='https://www.unicef.org/fr/la-convention-relative-aux-droits-de-lenfant' target='_blank' rel='noopener'>UNICEF – Convention relative aux droits de l’enfant</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Octobre 2025">
+        <div class="month">
+          <h2>Octobre 2025 — L’élève et son développement (L1–L2)</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Octobre 2025::0"/>
+                <span>Psychologie du développement</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Piaget</span><span class='chip'>Vygotski</span><span class='chip'>Erikson</span></div>
+            <div class="meta"><span class='pill'>1934–1950</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Piaget : 4 stades</li><li>Vygotski : ZPD</li><li>Erikson : 8 crises</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Piaget – La psychologie de l’intelligence</li><li>Vygotski – Pensée et langage</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.simplypsychology.org/piaget.html' target='_blank' rel='noopener'>SimplyPsychology – Piaget (EN)</a></li><li><a href='https://www.verywellmind.com/erik-eriksons-stages-of-psychosocial-development-2795740' target='_blank' rel='noopener'>VerywellMind – Erikson (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Octobre 2025::1"/>
+                <span>Psychologie de l’apprentissage</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Pavlov</span><span class='chip'>Skinner</span><span class='chip'>Bruner</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Behaviorisme</li><li>Cognitivisme</li><li>Constructivisme</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Skinner – Science and Human Behavior</li><li>Bruner – The Process of Education</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.khanacademy.org/test-prep/mcat/processing-the-environment' target='_blank' rel='noopener'>Khan Academy – Psychologie (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Octobre 2025::2"/>
+                <span>Statistiques descriptives (bases)</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Moyenne</li><li>Médiane</li><li>%</li><li>Graphiques</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>La Haye – Statistiques appliquées</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.khanacademy.org/math/statistics-probability' target='_blank' rel='noopener'>Khan Academy – Statistics (EN)</a></li><li><a href='https://www.openintro.org/book/os/' target='_blank' rel='noopener'>OpenIntro Statistics (PDF, EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Octobre 2025::3"/>
+                <span>🎁 Bonus – Orientation scolaire & pro</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Parsons</span><span class='chip'>Super</span></div>
+            <div class="meta"><span class='pill'>1909</span><span class='pill'>1959</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Parsons</li><li>Super</li><li>ONISEP</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Super – Career Development Theory</li><li>Huteau – Psychologie de l’orientation</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.onisep.fr' target='_blank' rel='noopener'>ONISEP – Ressources orientation</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Novembre 2025">
+        <div class="month">
+          <h2>Novembre 2025 — Penser et comparer l’éducation (L1–L3)</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Novembre 2025::0"/>
+                <span>Philosophie de l’éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Rousseau</span><span class='chip'>Kant</span><span class='chip'>Freire</span><span class='chip'>Meirieu</span></div>
+            <div class="meta"><span class='pill'>1762</span><span class='pill'>1970</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Rousseau (1762)</li><li>Kant</li><li>Freire (1970)</li><li>Meirieu</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Rousseau – Émile</li><li>Freire – Pédagogie des opprimés</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://plato.stanford.edu/' target='_blank' rel='noopener'>Stanford Encyclopedia of Philosophy (EN)</a></li><li><a href='https://www.cairn.info/' target='_blank' rel='noopener'>Cairn.info – Pédagogie (FR)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Novembre 2025::1"/>
+                <span>Anthropologie de l’éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Mead</span><span class='chip'>Lévi-Strauss</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Transmission culturelle</li><li>Rites de passage</li><li>Apprentissages informels</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Mead – Culture and Commitment</li><li>Lévi-Strauss – Anthropologie structurale</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://journals.openedition.org/' target='_blank' rel='noopener'>OpenEdition – Anthropologie</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Novembre 2025::2"/>
+                <span>Pédagogies comparées</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Freinet</span><span class='chip'>Montessori</span><span class='chip'>Freire</span><span class='chip'>Giroux</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Freinet</li><li>Montessori</li><li>Pédagogie critique</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Freinet – L’Éducation du travail</li><li>Montessori – La pédagogie scientifique</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.icem-pedagogie-freinet.org/' target='_blank' rel='noopener'>ICEM Freinet</a></li><li><a href='https://www.montessori-france.asso.fr/' target='_blank' rel='noopener'>Association Montessori France</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Novembre 2025::3"/>
+                <span>🎁 Bonus – Économie de l’éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Becker</span><span class='chip'>Schultz</span><span class='chip'>Hanushek</span></div>
+            <div class="meta"><span class='pill'>1964</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Capital humain</li><li>Rendements</li><li>OCDE</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Becker – Human Capital</li><li>OCDE – Regards sur l’éducation</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.oecd.org/education/' target='_blank' rel='noopener'>OCDE – Regards sur l’éducation</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Décembre 2025">
+        <div class="month">
+          <h2>Décembre 2025 — École et société (L2)</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Décembre 2025::0"/>
+                <span>Inégalités scolaires</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Bourdieu</span><span class='chip'>Passeron</span><span class='chip'>Lahire</span></div>
+            <div class="meta"><span class='pill'>1964–1970</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Reproduction</li><li>Effet établissement</li><li>Socialisation plurielle</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Bourdieu – La Noblesse d'État</li><li>Lahire – Tableaux de familles</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.insee.fr' target='_blank' rel='noopener'>INSEE – Inégalités</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Décembre 2025::1"/>
+                <span>Genre & éducation / Mobilité sociale</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Duru-Bellat</span><span class='chip'>Vouillot</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Stéréotypes</li><li>Parcours</li><li>Ascenseur social</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Duru-Bellat – L’école des filles</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.haut-conseil-egalite.gouv.fr/' target='_blank' rel='noopener'>Haut Conseil à l'Égalité</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Décembre 2025::2"/>
+                <span>Méthodologie qualitative</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Kaufmann</span><span class='chip'>Becker</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Observation</li><li>Entretiens</li><li>Analyse thématique</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Kaufmann – L’entretien compréhensif</li><li>Becker – Les ficelles du métier</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://hal.science/' target='_blank' rel='noopener'>HAL – Archives ouvertes (recherches FR)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Décembre 2025::3"/>
+                <span>🎁 Bonus – Éducation permanente (adultes)</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Lengrand</span><span class='chip'>Pineau</span></div>
+            <div class="meta"><span class='pill'>1971</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Formation continue</li><li>Éducation populaire</li><li>Histoires de vie</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Lengrand – L’éducation permanente</li><li>Pineau – Les histoires de vie</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.francecompetences.fr/' target='_blank' rel='noopener'>France Compétences</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Janvier 2026">
+        <div class="month">
+          <h2>Janvier 2026 — Institutions & politiques (L2)</h2>
+          <span class="badge">3 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Janvier 2026::0"/>
+                <span>Politiques éducatives & institutions</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Lelièvre</span></div>
+            <div class="meta"><span class='pill'>2005</span><span class='pill'>2013</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>MEN</li><li>Lois d’orientation</li><li>Gouvernance</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Lelièvre – Histoire des institutions scolaires</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.education.gouv.fr/' target='_blank' rel='noopener'>Ministère Éducation nationale</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Janvier 2026::1"/>
+                <span>Éducation comparée (PISA, etc.)</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>OCDE</span></div>
+            <div class="meta"><span class='pill'>1997→</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Structures</li><li>Pédagogies</li><li>Résultats</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Rapports PISA</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.oecd.org/pisa/' target='_blank' rel='noopener'>PISA – OCDE</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Janvier 2026::2"/>
+                <span>🎁 Bonus – Droit & éthique (approfondi)</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>ONU</span><span class='chip'>UNESCO</span></div>
+            <div class="meta"><span class='pill'>1948</span><span class='pill'>2000→</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>DUDH 1948</li><li>UNESCO</li><li>Protection des données (CNIL)</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Textes officiels</li><li>Guides CNIL</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.cnil.fr/' target='_blank' rel='noopener'>CNIL – Données scolaires</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Février 2026">
+        <div class="month">
+          <h2>Février 2026 — Recherche & outils (L2–L3)</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Février 2026::0"/>
+                <span>Méthodologie de recherche</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Quivy</span><span class='chip'>Van Campenhoudt</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Problématique</li><li>Hypothèses</li><li>Plan d’enquête</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Quivy & Van Campenhoudt – Manuel de recherche</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://openscience.eu/' target='_blank' rel='noopener'>OpenScience – Méthodo (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Février 2026::1"/>
+                <span>Statistiques avancées</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Corrélation (r)</li><li>Visualisation</li><li>Interprétation</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>OpenIntro Statistics</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://seeing-theory.brown.edu/' target='_blank' rel='noopener'>Seeing Theory (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Février 2026::2"/>
+                <span>Projet tutoré (terrain)</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Journal de bord</li><li>Annexes</li><li>Analyse</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Guides de mémoire universitaires</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://hal.science/' target='_blank' rel='noopener'>HAL – Mémoires & thèses</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Février 2026::3"/>
+                <span>🎁 Bonus – Orientation pro</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Portfolio compétences</li><li>Itinéraires</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>ONISEP – Métiers</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.francetravail.fr/' target='_blank' rel='noopener'>France Travail – Orientation</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Mars 2026">
+        <div class="month">
+          <h2>Mars 2026 — Grands pédagogues (L3)</h2>
+          <span class="badge">3 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mars 2026::0"/>
+                <span>Freinet, Montessori, Decroly</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Freinet</span><span class='chip'>Montessori</span><span class='chip'>Decroly</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Coopération</li><li>Autonomie</li><li>Centres d’intérêt</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Freinet – L’Éducation du travail</li><li>Montessori – La pédagogie scientifique</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.icem-pedagogie-freinet.org/' target='_blank' rel='noopener'>ICEM Freinet</a></li><li><a href='https://www.montessori-france.asso.fr/' target='_blank' rel='noopener'>Association Montessori France</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mars 2026::1"/>
+                <span>Pédagogie institutionnelle & critique</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Oury</span><span class='chip'>Vasquez</span><span class='chip'>Freire</span><span class='chip'>Giroux</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Institutions de classe</li><li>Émancipation</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Oury & Vasquez – Vers une pédagogie institutionnelle</li><li>Freire – Pédagogie des opprimés</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.gfen.asso.fr/' target='_blank' rel='noopener'>GFEN – Pédagogie</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mars 2026::2"/>
+                <span>🎁 Bonus – Économie éducation</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Becker</span><span class='chip'>Hanushek</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Coûts</li><li>Financements</li><li>Rendements</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Becker – Human Capital</li><li>OCDE – Regards sur l’éducation</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.oecd.org/fr/education/' target='_blank' rel='noopener'>OCDE – Éducation</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Avril 2026">
+        <div class="month">
+          <h2>Avril 2026 — Éducation & enjeux (L3)</h2>
+          <span class="badge">3 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Avril 2026::0"/>
+                <span>Multiculturalisme & inclusion</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Charles Gardou</span></div>
+            <div class="meta"><span class='pill'>2005</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Interculturalité</li><li>École inclusive</li><li>Handicap</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Gardou – Handicap, encyclopédie des savoirs</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://eduscol.education.fr/' target='_blank' rel='noopener'>Éducation inclusive – Éduscol</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Avril 2026::1"/>
+                <span>Éducation & numérique</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Marcel Lebrun</span></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>TIC</li><li>MOOC</li><li>Classe inversée</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Lebrun – Pédagogies actives</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://classroomscreen.com/' target='_blank' rel='noopener'>ClassroomScreen – Outils de classe</a></li><li><a href='https://www.fun-mooc.fr/' target='_blank' rel='noopener'>FUN-MOOC</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Avril 2026::2"/>
+                <span>🎁 Bonus – Formation des adultes</span>
+              </label>
+            </summary>
+            <div class="meta"><span class='chip'>Pineau</span><span class='chip'>Lengrand</span></div>
+            <div class="meta"><span class='pill'>1971</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Formation pro</li><li>VAE/VAP</li><li>Éducation populaire</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Pineau – Histoires de vie</li><li>Lengrand – L’éducation permanente</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://vae.gouv.fr/' target='_blank' rel='noopener'>VAE – portail officiel</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Mai 2026">
+        <div class="month">
+          <h2>Mai 2026 — Synthèse & professionnalisation (L3)</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mai 2026::0"/>
+                <span>Préparation dossier VAE</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Portfolio</li><li>Preuves</li><li>Alignement référentiel</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Guides VAE (universités)</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.univ-paris8.fr/Validation-des-acquis-de-l-experience-VAE' target='_blank' rel='noopener'>Paris 8 – VAE</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mai 2026::1"/>
+                <span>Révisions transversales</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Cartes mentales</li><li>QCM</li><li>Flashcards</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://apps.ankiweb.net/' target='_blank' rel='noopener'>Anki – Flashcards</a></li><li><a href='https://www.mindmeister.com/' target='_blank' rel='noopener'>MindMeister – Cartes mentales</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mai 2026::2"/>
+                <span>Débouchés & insertion</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Formateur</li><li>Éducateur</li><li>Chef de projet</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Onisep – Métiers</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.onisep.fr/' target='_blank' rel='noopener'>Onisep – Métiers de l'éducation</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Mai 2026::3"/>
+                <span>🎁 Bonus – Éthique appliquée</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"><span class='pill'>2018</span></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Cas pratiques</li><li>Déontologie</li><li>CNIL/RGPD</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>CNIL – Guides éducation & données</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.cnil.fr/' target='_blank' rel='noopener'>CNIL – RGPD & éducation</a></li></ul>
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+
+      <div class="card" data-month="Juin 2026">
+        <div class="month">
+          <h2>Juin 2026 — Final & Master prep</h2>
+          <span class="badge">4 modules</span>
+        </div>
+    
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Juin 2026::0"/>
+                <span>Mini-mémoire (20–30 pages)</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Problématique</li><li>Méthode</li><li>Discussion</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>Guides de rédaction universitaire</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.zotero.org/' target='_blank' rel='noopener'>Zotero – Organiser la biblio</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Juin 2026::1"/>
+                <span>Anglais académique</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Abstract</li><li>Keywords</li><li>Skimming/Scanning</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul><li>EAP – English for Academic Purposes</li></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://www.coursera.org/specializations/academic-english' target='_blank' rel='noopener'>Coursera – Academic English (EN)</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Juin 2026::2"/>
+                <span>Prépa Master (Hebrew University)</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Motivation letter</li><li>CV académique</li><li>Dossier</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul></ul>
+            <div class="muted">Ressources en ligne</div><ul><li><a href='https://international.huji.ac.il/' target='_blank' rel='noopener'>Hebrew University – Admissions</a></li></ul>
+          </details>
+        
+
+          <details>
+            <summary>
+              <label class="progress">
+                <input type="checkbox" class="cb" data-id="cb::Juin 2026::3"/>
+                <span>🎁 Bonus – Synthèse des bonus</span>
+              </label>
+            </summary>
+            <div class="meta"></div>
+            <div class="meta"></div>
+            <div class="muted">Notions clés</div>
+            <ul><li>Économie</li><li>Droit</li><li>Orientation</li><li>Adultes</li></ul>
+            <div class="muted">Bibliographie repère</div>
+            <ul></ul>
+            
+          </details>
+        
+        <div class="card-tools">
+          <button class="btn small mark-card">Tout cocher</button>
+          <button class="btn small unmark-card">Tout décocher</button>
+        </div>
+      </div>
+    
+  </div>
+  <footer>Conçu pour Ruben • Roadmap L1–L3 + bonus • Progression sauvegardée dans votre navigateur (localStorage)</footer>
+<script>
+  const search = document.getElementById('search');
+  const grid = document.getElementById('grid');
+  const expand = document.getElementById('expand');
+  const collapse = document.getElementById('collapse');
+  const resetBtn = document.getElementById('reset');
+
+  function normalize(s){ return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+
+  // Search filter
+  search.addEventListener('input', (e)=>{
+    const q = normalize(e.target.value);
+    [...grid.querySelectorAll('.card')].forEach(card=>{
+      const text = normalize(card.innerText);
+      card.classList.toggle('hidden', q && !text.includes(q));
+    });
+  });
+
+  // Expand/Collapse
+  expand.addEventListener('click', ()=>{ document.querySelectorAll('details').forEach(d => d.open = true); });
+  collapse.addEventListener('click', ()=>{ document.querySelectorAll('details').forEach(d => d.open = false); });
+
+  // Progress persistence
+  const KEY = "roadmap_edu_progress_v1";
+  function loadProgress(){
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e){ return {}; }
+  }
+  function saveProgress(map){ localStorage.setItem(KEY, JSON.stringify(map)); }
+  let PROG = loadProgress();
+
+  function initCheckboxes(){
+    document.querySelectorAll('input.cb').forEach(cb => {
+      const id = cb.dataset.id;
+      cb.checked = !!PROG[id];
+      cb.addEventListener('change', ()=>{
+        PROG[id] = cb.checked;
+        saveProgress(PROG);
+      });
+    });
+  }
+
+  // Mark/Unmark all inside a card
+  function initCardTools(){
+    document.querySelectorAll('.card').forEach(card => {
+      const mark = card.querySelector('.mark-card');
+      const unmark = card.querySelector('.unmark-card');
+      const cbs = card.querySelectorAll('input.cb');
+      mark?.addEventListener('click', ()=>{
+        cbs.forEach(cb => { cb.checked = true; PROG[cb.dataset.id] = true; });
+        saveProgress(PROG);
+      });
+      unmark?.addEventListener('click', ()=>{
+        cbs.forEach(cb => { cb.checked = false; PROG[cb.dataset.id] = false; });
+        saveProgress(PROG);
+      });
+    });
+  }
+
+  // Reset all progression
+  resetBtn.addEventListener('click', ()=>{
+    if(confirm("Réinitialiser toute la progression ?")){
+      PROG = {};
+      saveProgress(PROG);
+      document.querySelectorAll('input.cb').forEach(cb => cb.checked = false);
+    }
+  });
+
+  // Init
+  initCheckboxes();
+  initCardTools();
+
+// ---- Progress counters (global + per card) ----
+function computeProgress(){
+  const allCbs = [...document.querySelectorAll('input.cb')];
+  const total = allCbs.length;
+  const done = allCbs.filter(cb => cb.checked).length;
+  const pct = total ? Math.round(done*100/total) : 0;
+  document.getElementById('globalPct').textContent = pct + '%';
+  document.getElementById('globalBar').style.width = pct + '%';
+
+  // Per-card
+  document.querySelectorAll('.card').forEach(card => {
+    const cbs = [...card.querySelectorAll('input.cb')];
+    const t = cbs.length;
+    const d = cbs.filter(cb => cb.checked).length;
+    const p = t ? Math.round(d*100/t) : 0;
+    let meter = card.querySelector('.cardPct');
+    if(!meter){
+      const meterWrap = document.createElement('div');
+      meterWrap.className = 'muted';
+      meterWrap.style.margin = '-.2rem 0 .3rem';
+      meterWrap.innerHTML = 'Progression de ce mois : <strong class="cardPct">0%</strong>';
+      const monthHeader = card.querySelector('.month');
+      monthHeader.after(meterWrap);
+      meter = meterWrap.querySelector('.cardPct');
+    }
+    meter.textContent = p + '%';
+  });
+}
+
+// Recompute on init and on any checkbox change (we already attach change listener; hook there and also on load)
+function hookProgressListeners(){
+  document.querySelectorAll('input.cb').forEach(cb => {
+    cb.addEventListener('change', computeProgress);
+  });
+  computeProgress();
+}
+
+// Print
+document.getElementById('print').addEventListener('click', ()=>{
+  // Open all details before print
+  document.querySelectorAll('details').forEach(d => d.open = true);
+  setTimeout(()=>window.print(), 50);
+});
+window.addEventListener('beforeprint', ()=>{
+  document.querySelectorAll('details').forEach(d => d.open = true);
+});
+
+// After DOM is ready, init progress counters
+document.addEventListener('DOMContentLoaded', hookProgressListeners);
+// In case DOMContentLoaded already fired (script at end), run once:
+hookProgressListeners();
+
+</script>
+</body>
+</html>
